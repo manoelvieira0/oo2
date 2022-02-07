@@ -40,3 +40,9 @@ supernatural = Serie("supernatural", 2007, 15)
 supernatural.dar_like()
 print(f'{supernatural.nome} - {supernatural.ano} - {supernatural.temporadas} : {supernatural.likes} Like')
 
+filmes_e_series = [vingadores, supernatural]
+
+for programa in filmes_e_series:
+    detalhes = programa.duracao if hasattr(programa, 'duracao') else programa.temporadas
+    print(f'{programa.nome} - {programa.ano} - {detalhes} - {programa.likes} Like')
+
